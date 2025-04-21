@@ -1,0 +1,85 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\MapnaParsChatRoom\\MapnaParsChatRoom\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MapnaParsChatRoom.bundle.scp.css",
+      "PackagePath": "staticwebassets\\MapnaParsChatRoom.9pbnah93az.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\MapnaParsChatRoom\\MapnaParsChatRoom\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "D:\\MapnaParsChatRoom\\MapnaParsChatRoom\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\MapnaParsChatRoom\\MapnaParsChatRoom\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\MapnaParsChatRoom\\MapnaParsChatRoom\\wwwroot\\download.png",
+      "PackagePath": "staticwebassets\\download.png"
+    },
+    {
+      "Id": "D:\\MapnaParsChatRoom\\MapnaParsChatRoom\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "D:\\MapnaParsChatRoom\\MapnaParsChatRoom\\wwwroot\\font\\Vazirmatn-Black.ttf",
+      "PackagePath": "staticwebassets\\font\\Vazirmatn-Black.ttf"
+    },
+    {
+      "Id": "D:\\MapnaParsChatRoom\\MapnaParsChatRoom\\wwwroot\\font\\Vazirmatn-Bold.ttf",
+      "PackagePath": "staticwebassets\\font\\Vazirmatn-Bold.ttf"
+    },
+    {
+      "Id": "D:\\MapnaParsChatRoom\\MapnaParsChatRoom\\wwwroot\\font\\Vazirmatn-ExtraBold.ttf",
+      "PackagePath": "staticwebassets\\font\\Vazirmatn-ExtraBold.ttf"
+    },
+    {
+      "Id": "D:\\MapnaParsChatRoom\\MapnaParsChatRoom\\wwwroot\\font\\Vazirmatn-ExtraLight.ttf",
+      "PackagePath": "staticwebassets\\font\\Vazirmatn-ExtraLight.ttf"
+    },
+    {
+      "Id": "D:\\MapnaParsChatRoom\\MapnaParsChatRoom\\wwwroot\\font\\Vazirmatn-Light.ttf",
+      "PackagePath": "staticwebassets\\font\\Vazirmatn-Light.ttf"
+    },
+    {
+      "Id": "D:\\MapnaParsChatRoom\\MapnaParsChatRoom\\wwwroot\\font\\Vazirmatn-Medium.ttf",
+      "PackagePath": "staticwebassets\\font\\Vazirmatn-Medium.ttf"
+    },
+    {
+      "Id": "D:\\MapnaParsChatRoom\\MapnaParsChatRoom\\wwwroot\\font\\Vazirmatn-Regular.ttf",
+      "PackagePath": "staticwebassets\\font\\Vazirmatn-Regular.ttf"
+    },
+    {
+      "Id": "D:\\MapnaParsChatRoom\\MapnaParsChatRoom\\wwwroot\\font\\Vazirmatn-SemiBold.ttf",
+      "PackagePath": "staticwebassets\\font\\Vazirmatn-SemiBold.ttf"
+    },
+    {
+      "Id": "D:\\MapnaParsChatRoom\\MapnaParsChatRoom\\wwwroot\\font\\Vazirmatn-Thin.ttf",
+      "PackagePath": "staticwebassets\\font\\Vazirmatn-Thin.ttf"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.MapnaParsChatRoom.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.MapnaParsChatRoom.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.MapnaParsChatRoom.props",
+      "PackagePath": "build\\MapnaParsChatRoom.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.MapnaParsChatRoom.props",
+      "PackagePath": "buildMultiTargeting\\MapnaParsChatRoom.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.MapnaParsChatRoom.props",
+      "PackagePath": "buildTransitive\\MapnaParsChatRoom.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

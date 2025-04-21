@@ -1,0 +1,66 @@
+﻿@using MapnaParsChatRoom.Components.Layout
+@using Microsoft.AspNetCore.Authentication
+@using System.Security.Claims
+@using Microsoft.AspNetCore.Authentication.Cookies
+@layout EmptyLayout
+@page "/login"
+@inject MysingleToneService MysingleTonService
+
+@inject IJSRuntime jsruntime
+
+<style>
+
+    body
+    {
+        font-family: Vazirmatn;
+    }
+</style>
+
+<center>
+    <img src="download.png" alt="شرکت ژنراتور مپنا پارس">
+    <h2> شرکت مهندسی و ساخت ژنراتور مپنا پارس
+    </h2>
+</center>
+<div class="d-grid h-100">
+   
+    <div class="m-auto">
+        <EditForm FormName="myForm" Model="MyformModel" OnSubmit="OnSave">
+
+            <label class="form-label">نام و نام خانوادگی  خود را وراد کنید</label>
+            <br />
+            <InputText class="form-control" @bind-Value=MyformModel.Name />
+            <br />
+            <button type="submit" class="btn btn-primary">به هم بگویید ....</button>
+        </EditForm>
+    </div>
+</div>
+@code {
+    public class myFormClassModel
+    {
+        public string Name { get; set; }
+    }
+    [SupplyParameterFromForm(FormName = "myForm")]
+    public myFormClassModel MyformModel { get; set; } = new();
+
+    [CascadingParameter] public HttpContext httpContext { get; set; }
+
+    async Task OnSave()
+    {
+        if (MysingleTonService.IsExisted(MyformModel.Name) == false)
+        {
+            await httpContext.SignInAsync(new ClaimsPrincipal(new List<ClaimsIdentity>()
+            {
+                new ClaimsIdentity(new List<Claim>()
+                {
+                    new Claim(ClaimTypes.Name,MyformModel.Name)
+                },CookieAuthenticationDefaults.AuthenticationScheme)
+            }));
+            MysingleTonService.AddToListUsers(MyformModel.Name);
+            
+        }
+        else
+        {
+            await jsruntime.InvokeVoidAsync("alert", "name is Existed");
+        }
+    }
+}

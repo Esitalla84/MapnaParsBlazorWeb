@@ -1,0 +1,64 @@
+﻿@page "/weather"
+@attribute [StreamRendering]
+
+<PageTitle>Weather</PageTitle>
+
+<h1>Mapna Generator Pars</h1>
+
+<p> زمان تحول سازمان فرا رسیده است  </p>
+
+@if (forecasts == null)
+{
+    <p><em>به زودی...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>تاریخ</th>
+                <th>میزان مشارکت </th>
+                <th>پیشرفت کار </th>
+                <th>طرح های پیش رو</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var forecast in forecasts)
+            {
+                <tr>
+                    <td>@forecast.Date.ToShortDateString()</td>
+                    <td>@forecast.TemperatureC</td>
+                    <td>@forecast.TemperatureF</td>
+                    <td>@forecast.Summary</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private WeatherForecast[]? forecasts;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Simulate asynchronous loading to demonstrate streaming rendering
+        await Task.Delay(500);
+
+        var startDate = DateOnly.FromDateTime(DateTime.Now);
+        var summaries = new[] { "تولید", "فناوری", "ایده های سازنده", "منایع انسانی", "رفاهیات", "پیگیری های ویژه", "خرید بازرگانی", "فروش محصول", "برنامه ریزی مدرن", "طرح تحول سازمان" };
+        forecasts = Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            {
+                Date = startDate.AddDays(index),
+                TemperatureC = Random.Shared.Next(-20, 55),
+                Summary = summaries[Random.Shared.Next(summaries.Length)]
+            }).ToArray();
+    }
+
+    private class WeatherForecast
+    {
+        public DateOnly Date { get; set; }
+        public int TemperatureC { get; set; }
+        public string? Summary { get; set; }
+        public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+    }
+}

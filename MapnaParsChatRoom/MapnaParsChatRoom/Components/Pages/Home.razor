@@ -1,0 +1,63 @@
+﻿@page "/"
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components.Authorization
+@using System.Security.Claims
+@attribute [Authorize]
+@rendermode InteractiveServer
+@inject MysingleToneService MySingleToneService
+@inject AuthenticationStateProvider authState
+
+
+<PageTitle>Home</PageTitle>
+<style>
+
+    body 
+    {
+        font-family: Vazirmatn;
+    }
+</style>
+
+
+<img src="download.png" width="100px" height="100px" class="center" alt="شرکت ژنراتور مپنا پارس">
+
+<div>
+    
+    <p><em>با مشارکت هم ایده های خود را عملیاتی کنید</em></p>
+    <div class="d-flex gap-2">
+
+        <textarea rows="20" class="w-75 form-control" readonly>
+            @MySingleToneService.ListChatTextString
+        </textarea>
+
+        <textarea rows="20" class="w-25 form-control" readonly>
+            @MySingleToneService.ListUsersString
+        </textarea>
+    </div>
+    <br />
+    <p><em>یک اتفاق خوب را رقم بزنید</em></p>
+    <p><em>  شروع یک گفتگو ... همکار گرامی به اتاق گفتگو و مشارکت برای تحول سازمان خوش آمدید </em></p>
+    <div class="d-flex gap-2">
+
+        <input class="form-control w-75" @bind=text />
+        <button class="btn btn-primary w-25" @onclick=Send>ارسال</button>
+    </div>
+</div>
+
+@code {
+    protected override void OnInitialized()
+    {
+        MySingleToneService.OnChanged += async (o, e) =>
+        {
+            await InvokeAsync(StateHasChanged);
+        };
+    }
+    string text;
+    async Task Send()
+    {
+        if (string.IsNullOrWhiteSpace(text) == true) return;
+
+        string name = authState.GetAuthenticationStateAsync().Result.User.Claims.FirstOrDefault(q => q.Type == ClaimTypes.Name)?.Value;
+        MySingleToneService.AddToListchattext(name, text, DateTime.Now);
+        text = "";
+    }
+}

@@ -1,0 +1,14 @@
+wwwroot\app.css
+wwwroot\bootstrap\bootstrap.min.css
+wwwroot\bootstrap\bootstrap.min.css.map
+wwwroot\download.png
+wwwroot\favicon.png
+wwwroot\font\Vazirmatn-Black.ttf
+wwwroot\font\Vazirmatn-Bold.ttf
+wwwroot\font\Vazirmatn-ExtraBold.ttf
+wwwroot\font\Vazirmatn-ExtraLight.ttf
+wwwroot\font\Vazirmatn-Light.ttf
+wwwroot\font\Vazirmatn-Medium.ttf
+wwwroot\font\Vazirmatn-Regular.ttf
+wwwroot\font\Vazirmatn-SemiBold.ttf
+wwwroot\font\Vazirmatn-Thin.ttf
