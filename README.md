@@ -1,0 +1,2 @@
+# MapnaParsBlazorWeb
+MapnaParsBlazor web
